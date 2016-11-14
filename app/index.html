@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="css/main.css">
   </head>
   <body ng-app="app">
-    <div class="container">
-      <button ng-click="like"> X Likes</button>
+    <div class="container" ng-controller="MainController">
+      <button ng-click="addLike()"> {{ likes }} Likes</button>
       <button ng-click="toggle">+ or -</button>
     </div>
     <script src="js/bundle.js"></script>
