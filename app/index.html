@@ -9,8 +9,8 @@
   </head>
   <body ng-app="app">
     <div class="container" ng-controller="MainController">
-      <button ng-click="addLike()"> {{ likes }} Likes</button>
-      <button ng-click="toggle">+ or -</button>
+      <button ng-click="countLike()">{{ likes }} {{ text }}</button>
+      <button ng-click="toggle()">{{ sign }}</button>
     </div>
     <script src="js/bundle.js"></script>
   </body>

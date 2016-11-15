@@ -1,12 +1,25 @@
 function MainController ($scope) {
   $scope.likes = 0;
+  $scope.text = "Likes";
+  $scope.direction = true;
+  $scope.sign = "-";
 
-  $scope.addLike = function () {
-    $scope.likes += 1;
-  }
+  
+  $scope.countLike = function () {
 
-  $scope.subtractLike = function () {
-    $scope.likes -= 1;
+    $scope.toggle = function () {
+      $scope.direction = !$scope.direction;
+      if ($scope.direction) {
+        $scope.sign = "-"
+      } else {
+        $scope.sign = "+"
+      }
+    }
+
+    $scope.direction ? $scope.likes += 1 : $scope.likes -= 1;
+
+    $scope.likes === 1 ? $scope.text = "Like" : $scope.text = "Likes";
+    
   }
 
 }
