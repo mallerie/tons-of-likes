@@ -1,3 +1,10 @@
+$blue: #2B96DD;
+$dark-blue: #217EBA;
+
+* {
+  box-sizing: border-box;
+}
+
 .container {
   // text-align: center;
   // margin: auto;
@@ -5,6 +12,21 @@
     margin: 1em auto;
     display: block;
     color: white;
-    background: blue;
+    background: $blue;
+    border-radius: 8px;
+    border: none;
+    height: 2.5em;
+    width: 6em;
+    box-shadow: 0px 5px 0px 0px $dark-blue;
+  }
+  button:active {
+    height: 2.4em;
+    transform: translateY(4px);
+    box-shadow: 0px 1px 0px 0px $dark-blue;
+
+  }
+  #sign {
+    height: 2em;
+    width: 2em;
   }
 }
